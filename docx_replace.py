@@ -45,24 +45,5 @@ if __name__ == "__main__":
    for x in range(0,24):
        dblist.append(RandomAddress())
    placeholder = "HOLDER"
-   docx_replace('template.docx', dblist, placeholder, 'mod_template.docx')
-
-   import tempfile
-import win32api
-import win32print
-
-filename = tempfile.mktemp (".txt")
-open (filename, "w").write ("This is a test")
-win32api.ShellExecute (
-  0,
-  "print",
-  filename,
-  #
-  # If this is None, the default printer will
-  # be used anyway.
-  #
-  '/d:"%s"' % win32print.GetDefaultPrinter (),
-  ".",
-  0
-)
+   docx_replace('template.docx', dblist, placeholder, 'mod_template.docx'
 
